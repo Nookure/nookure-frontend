@@ -22,6 +22,12 @@ html {
     background-size: cover;
     background-color: transparent;
 }
+
+.a {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
 /* 
 .content {
     margin-top: 80px;
