@@ -156,6 +156,11 @@ input {
   font-size: 14px;
   font-weight: 300;
 }
+
+input:focus {
+  background-color: rgba(255, 255, 255, 0.17);
+}
+
 ::placeholder {
   color: #e5e5e5;
 }

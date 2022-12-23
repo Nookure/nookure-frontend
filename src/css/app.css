@@ -4,18 +4,18 @@ html {
 
 #app {
 
-  background-image: url("/src/assets/background.png");
+  /* background-image: url("/src/assets/background.png"); */
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-color: transparent;
-
+  background-color: #1f1f24 !important;
   color: white;
 }
 
 html {
-    background-image: url("/src/assets/background.png");
+    /* background-image: url("/src/assets/background.png"); */
+    background-color: #1f1f24 !important;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;

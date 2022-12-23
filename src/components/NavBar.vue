@@ -28,13 +28,6 @@
                             to="/">
                             Home </RouterLink>
                     </li>
-                    <li class="nav-item dropdown dropdown-hover mx-2">
-                        <RouterLink to="/about" role="button" style="text-decoration: none; color: inherit;"
-                            class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center">
-                            Second Page
-                        </RouterLink>
-
-                    </li>
                 </ul>
                 <ul class="navbar-nav d-lg-block">
                     <li class="nav-item">
