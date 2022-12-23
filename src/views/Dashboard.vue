@@ -14,7 +14,7 @@ const auth = getAuth();
 export default {
   data() {
     return {
-      email: auth.currentUser.email,
+      email: (auth.currentUser == null) ? "Anonymous" : auth.currentUser.email,
     };
   },
   methods: {
@@ -29,6 +29,12 @@ export default {
     },
   },
 };
+
+if(auth.currentUser == null) {
+  console.log("Not loged in");
+  this.$router.push("/");
+}
+
 </script>
 
 <style scoped>
