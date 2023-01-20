@@ -5,7 +5,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/app.css";
 import { router } from './router/router';
 import { initializeApp } from "firebase/app";
-import Notiflix from 'notiflix';
+import VSpoiler from 'v-spoiler';
+import 'v-spoiler/dist/v-spoiler.css';
+import Spoiler from './components/Spoiler.vue'
+
 
 
 const firebaseConfig = {
@@ -19,7 +22,8 @@ const firebaseConfig = {
 };
 const firebaseApp = initializeApp(firebaseConfig);
 const app = createApp(App)
-
 app.use(router)
+app.component('VSpoiler', VSpoiler);
 app.mount('#app')
+app.component('Spoiler', Spoiler);
 export { firebaseApp };

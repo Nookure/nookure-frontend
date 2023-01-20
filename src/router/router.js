@@ -26,6 +26,12 @@ const routes = [
     name: "Dashboard",
     component: () => import("../views/Dashboard.vue"),
   },
+  {
+    path: "/dump/:pathMatch(.*)*",
+    name: "NotFound",
+    component: () => import("../views/Dump.vue"),
+  },
+  
 ];
 
 export const router = createRouter({

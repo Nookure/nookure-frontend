@@ -50,6 +50,8 @@
 <script>
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import Notiflix from 'notiflix';
+import { authRedirectIfSignedIn } from '../auth/utils'
+
 export default {
   data() {
     return {
@@ -65,6 +67,7 @@ export default {
       signInWithEmailAndPassword(auth, this.email, this.password)
         .then(() => {
           this.$router.push("/dashboard");
+          Notiflix.Notify.success("Login completed!");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -79,6 +82,8 @@ export default {
     },
   },
 };
+
+authRedirectIfSignedIn()
 </script>
 <style scoped>
 *,

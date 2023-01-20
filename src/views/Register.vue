@@ -33,8 +33,13 @@
 </template>
 
 <script>
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import Notiflix from 'notiflix';
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import Notiflix from "notiflix";
+import { authRedirectIfSignedIn } from '../auth/utils'
 
 export default {
   data() {
@@ -55,7 +60,18 @@ export default {
           const user = userCredential.user;
           console.log(user);
           console.log("Registration completed");
-          this.$router.push("/");
+          Notiflix.Notify.success("Registration completed!");
+          signInWithEmailAndPassword(auth, this.email, this.password)
+            .then(() => {
+              this.$router.push("/dashboard");
+            })
+            .catch((error) => {
+              const errorCode = error.code;
+              const errorMessage = error.message;
+              console.log(errorCode);
+              console.log(errorMessage);
+              Notiflix.Notify.failure(errorMessage);
+            });
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -74,6 +90,8 @@ export default {
     },
   },
 };
+
+authRedirectIfSignedIn()
 </script>
 
 <style scoped>

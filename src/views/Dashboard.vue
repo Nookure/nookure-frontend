@@ -10,8 +10,11 @@
 
 <script>
 import { getAuth } from "firebase/auth";
+import { authRedirect } from "../auth/utils"
+
 const auth = getAuth();
 export default {
+  
   data() {
     return {
       email: (auth.currentUser == null) ? "Anonymous" : auth.currentUser.email,
@@ -30,10 +33,7 @@ export default {
   },
 };
 
-if(auth.currentUser == null) {
-  console.log("Not loged in");
-  this.$router.push("/");
-}
+authRedirect()
 
 </script>
 
