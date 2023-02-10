@@ -29,12 +29,44 @@
       </div>
     </div>
   </div>
+
+  <div class="parent">
+    <div class="info">
+      <h4>Installed Addons</h4>
+      <Spoiler title="Display its">
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Author</th>
+              <th scope="col">Description</th>
+              <th scope="col">Version</th>
+              <th scope="col">Main</th>
+            </tr>
+          </thead>
+          <tbody>
+          <Addon
+            v-for="(index) in addons"
+            :key="index.key"
+            :name="index.name"
+            :author="index.author"
+            :description="index.description"
+            :version="index.version"
+            :main="index.main"
+          >
+          </Addon>
+        </tbody>
+        </table>
+
+      </Spoiler>
+    </div>
+  </div>
 </template>
 
 <script>
 import axios from "axios";
-import Notiflix from 'notiflix';
-
+import Notiflix from "notiflix";
+import Addon from "../components/Addon.vue";
 
 export default {
   name: "Dump",
@@ -48,6 +80,14 @@ export default {
       serverVersion: "Loading...",
       javaVersion: "Loading...",
       plugins: ["MAStaff", "MAStaffChat"],
+
+      addons: [{
+        name: "Loading...",
+        author: "Loading...",
+        description: "Loading...",
+        version: "Loading...",
+        main: "Loading...",
+      }],
 
       config: "Loading...",
 
@@ -88,6 +128,7 @@ export default {
         this.buildTime = dump.git.time;
         this.pluginName = dump.pluginName;
 
+        this.addons = dump.addons;
 
         this.loaded = true;
       } catch (e) {
@@ -97,7 +138,9 @@ export default {
       }
     },
   },
-  components: {},
+  components: {
+    Addon,
+  },
   computed: {
     pasteId() {
       return this.$route.hash ? this.$route.hash.substring(1) : this.$route.query.id;
