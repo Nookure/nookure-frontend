@@ -37,7 +37,7 @@
       <div class="info">
         <h4 class="left">Installed Addons</h4>
         <Spoiler title="Show it">
-          <table class="table table-dark">
+          <table class="table table-striped table-dark">
             <thead>
               <tr>
                 <th scope="col">Name</th>
@@ -70,13 +70,13 @@
     <div class="info">
       <h4 class="left">Installed Plugins</h4>
       <Spoiler title="Show it">
-        <table class="table table-dark">
+        <table class="table table-striped table-dark">
           <thead>
             <tr>
               <th scope="col">Name</th>
               <th scope="col">Author</th>
               <th scope="col">Description</th>
-              <th scope="col">Version</th>
+              <th scope="col">Version</th>            
               <th scope="col">Main</th>
             </tr>
           </thead>
