@@ -23,7 +23,7 @@
 
     <div class="parent">
       <div class="info">
-        <h4>Server Specs</h4>
+        <h4 >Server Specs</h4>
         <span><b>OS: </b>{{ osName }} ({{ osArch }})</span>
         <span><b>OS Version: </b> {{ osVersion }}</span>
         <span><b>Uptime: </b> {{ uptime }} </span>
@@ -35,8 +35,8 @@
     <!-- Installed Addons -->
     <div class="parent">
       <div class="info">
-        <h4>Installed Addons</h4>
-        <Spoiler title="Display its">
+        <h4 class="left">Installed Addons</h4>
+        <Spoiler title="Show it">
           <table class="table table-dark">
             <thead>
               <tr>
@@ -68,8 +68,8 @@
   <!-- Installed Plugins -->
   <div class="parent">
     <div class="info">
-      <h4>Installed Plugins</h4>
-      <Spoiler title="Display its">
+      <h4 class="left">Installed Plugins</h4>
+      <Spoiler title="Show it">
         <table class="table table-dark">
           <thead>
             <tr>
