@@ -27,7 +27,7 @@ const routes = [
     component: () => import("../views/Dashboard.vue"),
   },
   {
-    path: "/dump/:pathMatch(.*)*",
+    path: "/dump/:id",
     name: "NotFound",
     component: () => import("../views/Dump.vue"),
   },
