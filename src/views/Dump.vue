@@ -10,14 +10,6 @@
         <span><b>Java Version</b> {{ javaVersion }}</span>
       </div>
     </div>
-    <!-- <div class="parent">
-      <div class="info">
-        <h4 class="left">Config</h4>
-        <Spoiler title="View it">
-          {{ config }}
-        </Spoiler>
-      </div>
-    </div> -->
 
     <div class="parent">
       <div class="info">
@@ -28,43 +20,53 @@
         <span><b>Build time: </b> {{ buildTime }}</span>
       </div>
     </div>
-  </div>
 
-  <!-- Installed Addons -->
-  <div class="parent">
-    <div class="info">
-      <h4>Installed Addons</h4>
-      <Spoiler title="Display its">
-        <table class="table table-dark">
-          <thead>
-            <tr>
-              <th scope="col">Name</th>
-              <th scope="col">Author</th>
-              <th scope="col">Description</th>
-              <th scope="col">Version</th>
-              <th scope="col">Main</th>
-            </tr>
-          </thead>
-          <tbody>
-          <Addon
-            v-for="(index) in addons"
-            :key="index.key"
-            :name="index.name"
-            :author="index.author"
-            :description="index.description"
-            :version="index.version"
-            :main="index.main"
-          >
-          </Addon>
-        </tbody>
-        </table>
+    <div class="parent">
+      <div class="info">
+        <h4>Server Specs</h4>
+        <span><b>OS: </b>{{ osName }} ({{ osArch }})</span>
+        <span><b>OS Version: </b> {{ osVersion }}</span>
+        <span><b>Uptime: </b> {{ uptime }} </span>
+        <span><b>Memory: </b> {{ allocatedMemory }} MB </span>
+        <span><b>CPUs: </b> {{ cpuCores }} </span>
+      </div>
+    </div>
 
-      </Spoiler>
+    <!-- Installed Addons -->
+    <div class="parent">
+      <div class="info">
+        <h4>Installed Addons</h4>
+        <Spoiler title="Display its">
+          <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Author</th>
+                <th scope="col">Description</th>
+                <th scope="col">Version</th>
+                <th scope="col">Main</th>
+              </tr>
+            </thead>
+            <tbody>
+              <Addon
+                v-for="index in addons"
+                :key="index.key"
+                :name="index.name"
+                :author="index.author"
+                :description="index.description"
+                :version="index.version"
+                :main="index.main"
+              >
+              </Addon>
+            </tbody>
+          </table>
+        </Spoiler>
+      </div>
     </div>
   </div>
 
-    <!-- Installed Plugins -->
-    <div class="parent">
+  <!-- Installed Plugins -->
+  <div class="parent">
     <div class="info">
       <h4>Installed Plugins</h4>
       <Spoiler title="Display its">
@@ -79,19 +81,18 @@
             </tr>
           </thead>
           <tbody>
-          <Addon
-            v-for="(index) in plugins"
-            :key="index.key"
-            :name="index.name"
-            :author="index.author"
-            :description="index.description"
-            :version="index.version"
-            :main="index.main"
-          >
-          </Addon>
-        </tbody>
+            <Addon
+              v-for="index in plugins"
+              :key="index.key"
+              :name="index.name"
+              :author="index.author"
+              :description="index.description"
+              :version="index.version"
+              :main="index.main"
+            >
+            </Addon>
+          </tbody>
         </table>
-
       </Spoiler>
     </div>
   </div>
@@ -114,21 +115,33 @@ export default {
       serverVersion: "Loading...",
       javaVersion: "Loading...",
 
-      addons: [{
-        name: "Loading...",
-        author: "Loading...",
-        description: "Loading...",
-        version: "Loading...",
-        main: "Loading...",
-      }],
+      osName: "Loading...",
+      osArch: "...",
+      osVersion: "Loading...",
+      uptime: "Loading...",
+      cpuName: "Loading...",
+      cpuCores: "...",
+      allocatedMemory: "Loading...",
 
-      plugins: [{
-        name: "Loading...",
-        author: "Loading...",
-        description: "Loading...",
-        version: "Loading...",
-        main: "Loading...",
-      }],
+      addons: [
+        {
+          name: "Loading...",
+          author: "Loading...",
+          description: "Loading...",
+          version: "Loading...",
+          main: "Loading...",
+        },
+      ],
+
+      plugins: [
+        {
+          name: "Loading...",
+          author: "Loading...",
+          description: "Loading...",
+          version: "Loading...",
+          main: "Loading...",
+        },
+      ],
 
       config: "Loading...",
 
@@ -168,6 +181,14 @@ export default {
         this.gitUser = dump.git.user;
         this.buildTime = dump.git.time;
         this.pluginName = dump.pluginName;
+
+        this.osName = dump.osName;
+        this.uptime = dump.uptime;
+        this.cpuCores = dump.cpuCores;
+        this.allocatedMemory = dump.allocatedMemory;
+        this.cpuName = dump.cpuName;
+        this.osArch = dump.osArch;
+        this.osVersion = dump.osVersion;
 
         this.addons = dump.addons;
         this.plugins = dump.plugins;
