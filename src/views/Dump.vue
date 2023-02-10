@@ -30,6 +30,7 @@
     </div>
   </div>
 
+  <!-- Installed Addons -->
   <div class="parent">
     <div class="info">
       <h4>Installed Addons</h4>
@@ -47,6 +48,39 @@
           <tbody>
           <Addon
             v-for="(index) in addons"
+            :key="index.key"
+            :name="index.name"
+            :author="index.author"
+            :description="index.description"
+            :version="index.version"
+            :main="index.main"
+          >
+          </Addon>
+        </tbody>
+        </table>
+
+      </Spoiler>
+    </div>
+  </div>
+
+    <!-- Installed Plugins -->
+    <div class="parent">
+    <div class="info">
+      <h4>Installed Plugins</h4>
+      <Spoiler title="Display its">
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Author</th>
+              <th scope="col">Description</th>
+              <th scope="col">Version</th>
+              <th scope="col">Main</th>
+            </tr>
+          </thead>
+          <tbody>
+          <Addon
+            v-for="(index) in plugins"
             :key="index.key"
             :name="index.name"
             :author="index.author"
@@ -79,9 +113,16 @@ export default {
       version: "Loading...",
       serverVersion: "Loading...",
       javaVersion: "Loading...",
-      plugins: ["MAStaff", "MAStaffChat"],
 
       addons: [{
+        name: "Loading...",
+        author: "Loading...",
+        description: "Loading...",
+        version: "Loading...",
+        main: "Loading...",
+      }],
+
+      plugins: [{
         name: "Loading...",
         author: "Loading...",
         description: "Loading...",
@@ -129,6 +170,7 @@ export default {
         this.pluginName = dump.pluginName;
 
         this.addons = dump.addons;
+        this.plugins = dump.plugins;
 
         this.loaded = true;
       } catch (e) {
