@@ -75,8 +75,8 @@
             <tr>
               <th scope="col">Name</th>
               <th scope="col">Author</th>
-              <th scope="col">Description</th>
-              <th scope="col">Version</th>            
+              <th scope="col">Ver</th>
+              <th scope="col">Description</th>            
               <th scope="col">Main</th>
             </tr>
           </thead>
