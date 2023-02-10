@@ -85,7 +85,7 @@ export default {
         this.gitBranch = dump.git.branch;
         this.gitCommit = dump.git.commit;
         this.gitUser = dump.git.user;
-        this.buildTime = dump.git.buildTime;
+        this.buildTime = dump.git.time;
         this.pluginName = dump.pluginName;
 
 
