@@ -23,7 +23,7 @@
 
     <div class="parent">
       <div class="info">
-        <h4 >Server Specs</h4>
+        <h4>Server Specs</h4>
         <span><b>OS: </b>{{ osName }} ({{ osArch }})</span>
         <span><b>OS Version: </b> {{ osVersion }}</span>
         <span><b>Uptime: </b> {{ uptime }} </span>
@@ -76,7 +76,7 @@
               <th scope="col">Name</th>
               <th scope="col">Author</th>
               <th scope="col">Ver</th>
-              <th scope="col">Description</th>            
+              <th scope="col">Description</th>
               <th scope="col">Main</th>
             </tr>
           </thead>
@@ -160,6 +160,19 @@ export default {
     },
 
     async loadData() {
+      Notiflix.Report.init({
+        backgroundColor: '#1F1F24',
+        failure: {
+          background: '#1F1F24',
+          svgColor: "#ff5549",
+          titleColor: "#FFFFFF",
+          messageColor: "#FFFFFF",
+          buttonBackground: "#ff5549",
+          buttonColor: "#fff",
+          backOverlayColor: "rgba(255,85,73,0.2)",
+        },
+
+      });
       this.pasteID = this.$route.params.id;
       if (!this.pasteID) {
         this.invalid = true;
@@ -196,7 +209,11 @@ export default {
         this.loaded = true;
       } catch (e) {
         console.log(e);
-        Notiflix.Notify.failure("Error loading dump!");
+        Notiflix.Report.failure(
+          "Error loading dump!",
+          "An error occurred while loading the dump. Please check that the link is correct.",
+          "OK",
+        );
         this.error = e.response ? e.response.data : e.message;
       }
     },

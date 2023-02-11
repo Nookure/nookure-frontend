@@ -1,6 +1,6 @@
 <template>
-    <div>
-        404
+    <div class="nf">
+        <p>404</p>
     </div>
 </template>
 
@@ -21,4 +21,11 @@ export default {
 
 <style scoped> 
 
+.nf {
+    font-size: 200px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 </style>
