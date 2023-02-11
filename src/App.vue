@@ -4,6 +4,18 @@ import NavBarVue from "./components/NavBar.vue";
 
 <template>
   <NavBarVue />
+  <section>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </section>
   <div class="bg">
     <div class="content">
       <router-view v-slot="{ Component, route }">
@@ -17,6 +29,8 @@ import NavBarVue from "./components/NavBar.vue";
   </div>
 </template>
 <style scoped>
+@import "./assets/css/stars.css";
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.35s ease;
@@ -45,4 +59,10 @@ import NavBarVue from "./components/NavBar.vue";
   }
 }
 
+body {
+  overflow: overlay;
+}
+:root {
+  color-scheme: dark;
+}
 </style>
