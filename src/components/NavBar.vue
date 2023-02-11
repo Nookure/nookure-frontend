@@ -1,43 +1,102 @@
 <template>
-    <nav
-        class="navbar navbar-expand-lg  blur blur-rounded top-0  z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
-        <span class="container-fluid px-0">
-
-            <button class="navbar-toggler shadow-none ms-md-2" type="button" data-bs-toggle="collapse"
-            
-                data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
-                aria-label="Toggle navigation">
-                
-                <span class="navbar-toggler-icon mt-2">
-                    <span class="navbar-toggler-bar bar1"></span>
-                    <span class="navbar-toggler-bar bar2"></span>
-                    <span class="navbar-toggler-bar bar3"></span>
-                </span>
-                
-            </button>
-
-            <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0" id="navigation">
-                <RouterLink class="navbar-brand font-weight-bolder ms-sm-3" to="/" rel="tooltip" title="" data-placement="bottom"
-                style="margin-left: 15px;">
-                <img src="/src/assets/logo.png" style="width: 38px; margin: -15px; border-radius: 50px;">
-            </RouterLink>
-                <ul class="navbar-nav navbar-nav-hover mx-auto">
-                    <li class="nav-item dropdown dropdown-hover mx-2">
-                        <RouterLink role="button" style="text-decoration: none; color: inherit;"
-                            class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                            to="/">
-                            Home </RouterLink>
-                    </li>
-                </ul>
-                <ul class="navbar-nav d-lg-block">
-                    <li class="nav-item">
-                        <RouterLink class="btn btn-sm w-100 bg-gradient-primary  btn-round mb-0 me-1"
-                            style="text-decoration: none; color: inherit;" to="/login">Login</RouterLink>
-                    </li>
-                </ul>
-            </div>
+  <nav
+    class="navbar navbar-expand-lg blur blur-rounded top-0 z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4"
+  >
+    <span class="container-fluid px-0">
+      <button
+        class="navbar-toggler shadow-none ms-md-2"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navigation"
+        aria-controls="navigation"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon mt-2">
+          <span class="navbar-toggler-bar bar1"></span>
+          <span class="navbar-toggler-bar bar2"></span>
+          <span class="navbar-toggler-bar bar3"></span>
         </span>
-    </nav>
+      </button>
+
+      <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0" id="navigation">
+        <RouterLink
+          class="navbar-brand font-weight-bolder ms-sm-3"
+          to="/"
+          rel="tooltip"
+          title=""
+          data-placement="bottom"
+          style="margin-left: 15px"
+        >
+          <img
+            src="/src/assets/logo.png"
+            style="width: 38px; margin: -15px; border-radius: 50px"
+          />
+        </RouterLink>
+        <ul class="navbar-nav navbar-nav-hover mx-auto">
+          <li class="nav-item dropdown dropdown-hover mx-2">
+            <RouterLink
+              role="button"
+              style="text-decoration: none; color: inherit"
+              class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
+              to="/"
+            >
+              Home
+            </RouterLink>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle .text-light"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              MAStaff
+            </a>
+            <ul class="dropdown-menu .text-light">
+              <RouterLink
+                role="button"
+                class="dropdown-item"
+                to="/addons/mastaff"
+              >
+                Addons
+              </RouterLink>
+              <li>
+                <a
+                  class="dropdown-item"
+                  target="_blank"
+                  href="https://docs.nookure.com/docs/category/mastaff"
+                  >Documentation</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  target="_blank"
+                  href="https://builtbybit.com/resources/25460/"
+                  >Buy it</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav d-lg-block">
+          <li class="nav-item">
+            <RouterLink
+              class="btn btn-sm w-100 bg-gradient-primary btn-round mb-0 me-1"
+              style="text-decoration: none; color: inherit"
+              to="/login"
+              >Login</RouterLink
+            >
+          </li>
+        </ul>
+      </div>
+    </span>
+  </nav>
 </template>
 <script>
 import { RouterLink } from "vue-router";
@@ -52,6 +111,10 @@ export default {
 <style scoped>
 .blur.blur-rounded {
   border-radius: 40px;
+}
+
+ul {
+  color: white !important;
 }
 .navbar {
   /* From https://css.glass */
@@ -133,12 +196,52 @@ user agent stylesheet nav {
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
+  --bs-navbar-color: #ffff;
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(var(--bs-gutter-y) * -1);
   margin-right: calc(var(--bs-gutter-x) * -0.5);
   margin-left: calc(var(--bs-gutter-x) * -0.5);
 }
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.nav-link:focus {
+  color: white;
+}
+
+.nav-link:active {
+  color: white;
+}
+
+.nav-link:visited {
+  color: white;
+}
+
+.dropdown-menu {
+  background-color: #212126;
+}
+
+.dropdown-menu:hover {
+  background-color: #212126;
+}
+
+.dropdown-item {
+  color: white;
+}
+
+.dropdown-item:hover {
+  color: white;
+  background-color: #18181b;
+  transition: all 0.3s ease;
+}
+
 body {
   font-weight: 400;
   line-height: 1.6;
@@ -183,13 +286,9 @@ body {
   --bs-dark: #344767;
   --bs-white: #fff;
   --bs-font-sans-serif: Open Sans;
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(
-    180deg,
-    hsla(0, 0%, 100%, 0.15),
-    hsla(0, 0%, 100%, 0)
-  );
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  --bs-gradient: linear-gradient(180deg, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0));
 }
 :host,
 :root {
@@ -232,5 +331,4 @@ body {
 ::-webkit-scrollbar-track {
   background-color: inherit;
 }
-
 </style>

@@ -48,7 +48,7 @@
               </tr>
             </thead>
             <tbody>
-              <Addon
+              <AddonRow
                 v-for="index in addons"
                 :key="index.key"
                 :name="index.name"
@@ -57,7 +57,7 @@
                 :version="index.version"
                 :main="index.main"
               >
-              </Addon>
+              </AddonRow>
             </tbody>
           </table>
         </Spoiler>
@@ -81,7 +81,7 @@
             </tr>
           </thead>
           <tbody>
-            <Addon
+            <AddonRow
               v-for="index in plugins"
               :key="index.key"
               :name="index.name"
@@ -90,7 +90,7 @@
               :version="index.version"
               :main="index.main"
             >
-            </Addon>
+            </AddonRow>
           </tbody>
         </table>
       </Spoiler>
@@ -101,7 +101,7 @@
 <script>
 import axios from "axios";
 import Notiflix from "notiflix";
-import Addon from "../components/Addon.vue";
+import AddonRow from "../components/AddonRow.vue";
 
 export default {
   name: "Dump",
@@ -202,7 +202,7 @@ export default {
     },
   },
   components: {
-    Addon,
+    AddonRow,
   },
   computed: {
     pasteId() {

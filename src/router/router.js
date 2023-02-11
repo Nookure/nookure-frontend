@@ -31,6 +31,11 @@ const routes = [
     name: "NotFound",
     component: () => import("../views/Dump.vue"),
   },
+  {
+    path: "/addons/mastaff",
+    name: "MAStaff",
+    component: () => import("../views/addons/MAStaff.vue"),
+  }
   
 ];
 
