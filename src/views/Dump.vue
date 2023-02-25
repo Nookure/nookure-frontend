@@ -181,6 +181,7 @@ export default {
         return;
       }
       try {
+        Notiflix.Loading.pulse("Loading...");
         const { data } = await axios.get(`https://api.pastes.dev/${this.pasteID}`);
         console.log(data);
 
@@ -207,6 +208,8 @@ export default {
         this.plugins = dump.plugins;
 
         this.loaded = true;
+
+        Notiflix.Loading.remove();
       } catch (e) {
         console.log(e);
         Notiflix.Report.failure(
