@@ -34,7 +34,7 @@
 
     <!-- Installed Addons -->
     <div class="parent">
-      <div class="info">
+      <div class="info" style="overflow-x:auto;">
         <h4 class="left">Installed Addons</h4>
         <Spoiler title="Show it">
           <table class="table table-striped table-dark">
@@ -67,10 +67,10 @@
 
   <!-- Installed Plugins -->
   <div class="parent">
-    <div class="info">
+    <div class="info" style="overflow-x:auto;">
       <h4 class="left">Installed Plugins</h4>
-      <Spoiler title="Show it">
-        <table class="table table-striped table-dark">
+      <Spoiler title="Show it" style="overflow-x:auto;">
+        <table class="table table-striped table-dark" style="overflow-x:auto;">
           <thead>
             <tr>
               <th scope="col">Name</th>
