@@ -2,11 +2,6 @@ import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
   {
-    path: "/:pathMatch(.*)*",
-    name: "NotFound",
-    component: () => import("../views/NotFound.vue"),
-  },
-  {
     path: "/",
     name: "Home",
     component: () => import("../views/Home.vue"),
@@ -28,7 +23,6 @@ const routes = [
   },
   {
     path: "/dashboard",
-    name: "Dashboard",
     component: () => import("../views/Dashboard.vue"),
   },
   {
@@ -38,11 +32,15 @@ const routes = [
   },
   {
     path: "/dump/:id",
-    name: "NotFound",
+    name: "Dump",
     component: () => import("../views/Dump.vue"),
   },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "NotFound",
+    component: () => import("../views/NotFound.vue"),
+  },
 
-  
 ];
 
 export const router = createRouter({
