@@ -4,7 +4,7 @@ import NavBarVue from "./components/NavBar.vue";
 
 <template>
   <NavBarVue />
-  <section>
+  <section class="stars">
     <span></span>
     <span></span>
     <span></span>
