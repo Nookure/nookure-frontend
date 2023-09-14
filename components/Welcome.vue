@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center justify-center align-middle flex-col h-full">
     <h1 class="xl:text-9xl md:text-8xl text-6xl">Welcome to <span class="nookure-welcome">Nookure</span></h1>
-    <h2 class="xl:text-5xl md:text-4xl text-2xl text-stone-400">Group of developers of Minecraft</h2>
+    <h2 class="xl:text-5xl md:text-4xl text-2xl text-stone-400">Where your ideas become code</h2>
   </div>
 </template>
 
@@ -14,6 +14,7 @@ h1 {
   text-align: center;
   font-weight: bold;
   margin-bottom: 1rem;
+  animation: pulse 5s ease infinite;
 }
 
 h2 {
@@ -44,6 +45,18 @@ h2 {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    filter: drop-shadow(0 0 80px #fc4a4a);
+  }
+  50% {
+    filter: drop-shadow(0 0 40px #fc4a4a);
+  }
+  100% {
+    filter: drop-shadow(0 0 80px #fc4a4a);
   }
 }
 </style>
