@@ -7,4 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/image',
   ],
+  colorMode: {
+    preference: 'dark'
+  }
 })
