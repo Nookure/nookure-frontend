@@ -75,11 +75,7 @@ const toggleNav = () => {
   const mobileNav = document.getElementById("navbar-mobile");
   if (mobileNav == null) return;
 
-  if (!mobileNav.classList.contains("navbar-mobile-hide")) {
-    return;
-  }
-
-  mobileNav.classList.remove("navbar-mobile-hide");
+  mobileNav.classList.toggle("navbar-mobile-hide");
 };
 
 watch(route, () => {
