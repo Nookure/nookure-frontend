@@ -10,6 +10,11 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "nuxt": "^3.7.2"
+    "@nuxt/image": "1.0.0-rc.1",
+    "@nuxt/ui": "^2.8.1",
+    "@nuxtjs/i18n": "8.0.0-rc.4",
+    "@pinia/nuxt": "^0.4.11",
+    "nuxt": "^3.7.2",
+    "pinia": "^2.1.6"
   }
 }
