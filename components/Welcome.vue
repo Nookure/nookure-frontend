@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center justify-center align-middle flex-col h-full">
-    <h1 class="xl:text-9xl md:text-8xl text-6xl">Welcome to <span class="nookure-welcome">Nookure</span></h1>
-    <h2 class="xl:text-5xl md:text-4xl text-2xl text-stone-400">Where your ideas become code</h2>
+    <h1 class="xl:text-9xl md:text-8xl text-6xl">{{ $t('index.welcome.header') }} <span class="nookure-welcome">Nookure</span></h1>
+    <h2 class="xl:text-5xl md:text-4xl text-2xl text-stone-400">{{ $t('index.welcome.subHeader') }}</h2>
   </div>
 </template>
 
