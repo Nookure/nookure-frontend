@@ -6,8 +6,12 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxt/ui',
     '@nuxt/image',
+    'nuxt-twemoji'
   ],
   colorMode: {
     preference: 'dark'
+  },
+  i18n: {
+    vueI18n: './i18n.config.ts'
   }
 })
