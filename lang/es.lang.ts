@@ -32,4 +32,9 @@ export default {
     products: "Productos",
     docs: "Docs",
   },
+  footer: {
+    resources: "Recursos",
+    followUs: "Siguenos",
+    accounts: "Cuentas",
+  },
 }

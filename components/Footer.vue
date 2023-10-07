@@ -23,7 +23,7 @@ const goUp = () => {
               <h2
                 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
               >
-                Resources
+                {{ $t("footer.resources") }}
               </h2>
               <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-4">
@@ -48,7 +48,7 @@ const goUp = () => {
               <h2
                 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
               >
-                Follow us
+                {{ $t("footer.followUs") }}
               </h2>
               <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-4">
@@ -67,7 +67,7 @@ const goUp = () => {
               <h2
                 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
               >
-                Accounts
+                {{ $t("footer.accounts") }}
               </h2>
               <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-4">

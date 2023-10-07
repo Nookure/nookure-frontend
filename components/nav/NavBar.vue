@@ -45,7 +45,7 @@
             :tl="page.tl"
             :target="page.target"
           />
-          
+
           <NavSelectLang />
         </ul>
       </div>
@@ -57,15 +57,15 @@
       <ul
         class="flex flex-col font-medium p-2 md:p-0 mt-2 rounded-lg md:flex-row md:space-x- md:mt-0 bg-stone-800 m-2"
       >
-          <NavBarButton
-            v-for="page in pages"
-            :key="page.to"
-            :to="page.to"
-            :tl="page.tl"
-            :target="page.target"
-          />
+        <NavBarButton
+          v-for="page in pages"
+          :key="page.to"
+          :to="page.to"
+          :tl="page.tl"
+          :target="page.target"
+        />
 
-          <NavSelectLang />
+        <NavSelectLang />
       </ul>
     </div>
   </nav>
