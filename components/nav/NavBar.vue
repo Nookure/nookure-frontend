@@ -38,37 +38,56 @@
         <ul
           class="flex flex-col font-medium p-2 md:p-0 mt-2 border rounded-lg md:flex-row md:space-x- md:mt-0 md:border-0"
         >
-          <NavBarButton v-for="page in pages" :key="page.to" :to="page.to" :tl="page.tl" :target="page.target" />
+          <NavBarButton
+            v-for="page in pages"
+            :key="page.to"
+            :to="page.to"
+            :tl="page.tl"
+            :target="page.target"
+          />
+          
+          <NavSelectLang />
         </ul>
       </div>
     </div>
-    <div class="items-center md:hidden md:w-full flex-wrap transition-transform navbar-mobile navbar-mobile-hide" id="navbar-mobile">
+    <div
+      class="items-center md:hidden md:w-full flex-wrap transition-transform navbar-mobile navbar-mobile-hide"
+      id="navbar-mobile"
+    >
       <ul
         class="flex flex-col font-medium p-2 md:p-0 mt-2 rounded-lg md:flex-row md:space-x- md:mt-0 bg-stone-800 m-2"
       >
-        <NavBarButton v-for="page in pages" :key="page.to" :to="page.to" :tl="page.tl" :target="page.target" />
+          <NavBarButton
+            v-for="page in pages"
+            :key="page.to"
+            :to="page.to"
+            :tl="page.tl"
+            :target="page.target"
+          />
+
+          <NavSelectLang />
       </ul>
     </div>
   </nav>
 </template>
 
 <script lang="ts" setup>
-import { useRoute } from '#vue-router';
+import { useRoute } from "#vue-router";
 const route = useRoute();
 const pages = [
   {
     to: "/",
-    tl: "Home",
+    tl: "nav.home",
   },
   {
     to: "/products",
-    tl: "Products",
+    tl: "nav.products",
   },
   {
     to: "https://mastaff.nookure.com/",
-    tl: "Docs",
+    tl: "nav.docs",
     target: "__blank",
-  }
+  },
 ];
 
 const toggleNav = () => {
@@ -84,7 +103,6 @@ watch(route, () => {
 
   mobileNav.classList.add("navbar-mobile-hide");
 });
-
 </script>
 
 <style>
@@ -98,5 +116,4 @@ watch(route, () => {
 .navbar-mobile-hide {
   transform: translateY(-2000px);
 }
-
 </style>

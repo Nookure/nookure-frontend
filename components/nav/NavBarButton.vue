@@ -22,7 +22,7 @@ const props = defineProps({
       :to="to"
       class="block py-2 pl-3 pr-4 text-red-white"
       aria-current="page"
-      >{{ tl }}</nuxt-link
+      >{{ $t(tl) }}</nuxt-link
     >
   </li>
 </template>
