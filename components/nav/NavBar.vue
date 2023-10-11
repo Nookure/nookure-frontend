@@ -117,3 +117,9 @@ watch(route, () => {
   transform: translateY(-2000px);
 }
 </style>
+
+<style scoped>
+nav {
+  z-index: 999999 !important;
+}
+</style>
