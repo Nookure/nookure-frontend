@@ -37,4 +37,19 @@ export default {
     followUs: "Siguenos",
     accounts: "Cuentas",
   },
+  resource: {
+    header: `Algunos proyectos <span class="red-glow-gradient">increíbles</span>`,
+    mastaff: {
+      description: "Plugin de Staff para Spigot, Bukkit, Paper, Bungee y Folia",
+    },
+    nooktheme: {
+      description: "Es un tema gratuito para pterodactyl simple y bonito listo para usar",
+    },
+    ice: {
+      description: "Un tema de Ice basado en Minecraft para Pterodactyl Panel",
+    },
+    purple: {
+      description: "Un tema de Purple basado en Minecraft para Pterodactyl Panel",
+    },
+  }
 }
