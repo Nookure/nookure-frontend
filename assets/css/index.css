@@ -1,0 +1,44 @@
+.red-glow-gradient {
+  background: #cf3030;
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    #cf3030 0%,
+    #ff6666 50%,
+    #ba5959 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 5s ease infinite;
+}
+
+.pulse {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  animation: pulse 5s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    filter: drop-shadow(0 0 80px #fc4a4a);
+  }
+  50% {
+    filter: drop-shadow(0 0 40px #fc4a4a);
+  }
+  100% {
+    filter: drop-shadow(0 0 80px #fc4a4a);
+  }
+}

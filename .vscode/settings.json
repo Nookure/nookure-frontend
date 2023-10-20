@@ -1,0 +1,13 @@
+{
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+},
+"vue3snippets.enable-compile-vue-file-on-did-save-code": false,
+"cSpell.words": [
+  "heroicons",
+  "Nookure"
+]
+}
