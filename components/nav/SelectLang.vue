@@ -1,6 +1,21 @@
 <script lang="ts" setup>
 const { locale } = useI18n();
 
+onBeforeMount(() => {
+  const localStorageLang = localStorage.getItem("page_lang");
+
+  if (localStorageLang) {
+    handleLang(localStorageLang);
+    return;
+  }
+
+  const browserLang = navigator.language;
+
+  handleLang(browserLang);
+
+  localStorage.setItem("page_lang", browserLang);
+});
+
 const en: lang = {
   key: "en",
   tl: "English",
@@ -28,21 +43,6 @@ const selected = ref(languages[0]);
 watch(selected, (value) => {
   handleLang(value);
 });
-
-onMounted(() => {
-  const localStorageLang = localStorage.getItem("page_lang");
-
-  if (localStorageLang) {
-    handleLang(localStorageLang);
-    return;
-  }
-
-  const browserLang = navigator.language;
-
-  handleLang(browserLang);
-
-  localStorage.setItem("page_lang", browserLang);
-})
 
 const handleLang = (key: string) => {
   if (key.toLowerCase().startsWith("es")) {
