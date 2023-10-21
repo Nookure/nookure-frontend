@@ -1,5 +1,16 @@
 <script lang="ts" setup>
 import products from '~/data/products';
+const { t } = useI18n();
+
+useHead({
+  title: t("products.meta.title"),
+  meta: [
+    {
+      name: "description",
+      content: t("products.meta.description"),
+    },
+  ],
+});
 </script>
 
 <template>
