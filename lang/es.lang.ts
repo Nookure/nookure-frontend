@@ -27,6 +27,12 @@ export default {
       }
     },
   },
+  products: {
+    meta: {
+      title: "Nookure - Productos",
+      description: "Aquí encontrará información sobre nuestros productos.",
+    },
+  },
   nav: {
     home: "Inicio",
     products: "Productos",

@@ -27,6 +27,12 @@ export default {
       }
     },
   },
+  products: {
+    meta: {
+      title: "Nookure - Products",
+      description: "Here you will find information about our products.",
+    },
+  },
   nav: {
     home: "Home",
     products: "Products",
@@ -44,7 +50,7 @@ export default {
       description: "Staff Plugin for Spigot, Bukkit, Paper, Bungee and Folia",
     },
     nooktheme: {
-      description: "Is a simple and beatiful pterodactyl free theme ready to use",
+      description: "Is a simple and beautiful pterodactyl free theme ready to use",
     },
     ice: {
       description: "A Ice theme based on Minecraft for Pterodactyl Panel",
