@@ -39,6 +39,7 @@ export default {
   },
   resource: {
     header: `Algunos proyectos <span class="red-glow-gradient">increíbles</span>`,
+    visitPage: "Visitar Página",
     mastaff: {
       description: "Plugin de Staff para Spigot, Bukkit, Paper, Bungee y Folia",
     },

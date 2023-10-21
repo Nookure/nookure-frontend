@@ -30,10 +30,11 @@ defineProps({
         {{ $t(product.description) }}
       </p>
       <a
-        href="#"
+        target="_blank"
+        :href="product.url"
         class="inline-flex items-center px-3 py-2 text-sm font-medium text-cente rounded-lg focus:ring-4 focus:outline-none bg-red-400 hover:bg-red-500 focus:ring-red-700 transition-all duration-500"
       >
-        Visit Page
+        {{ $t('resource.visitPage') }}
         <svg
           class="w-3.5 h-3.5 ml-2"
           aria-hidden="true"
