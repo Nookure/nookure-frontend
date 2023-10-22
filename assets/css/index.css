@@ -13,6 +13,8 @@
 }
 
 .pulse {
+  position: relative;
+  z-index: -1;
   text-align: center;
   font-weight: bold;
   margin-bottom: 1rem;
