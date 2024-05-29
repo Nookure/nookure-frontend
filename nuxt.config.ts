@@ -15,6 +15,9 @@ export default defineNuxtConfig({
     vueI18n: './i18n.config.ts'
   },
   ssr: true,
+  experimental: {
+    viewTransition: true
+  },
   nitro: {
     preset: 'node-server'
   }
