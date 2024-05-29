@@ -84,7 +84,7 @@ const pages = [
     tl: "nav.products",
   },
   {
-    to: "https://mastaff.nookure.com/",
+    to: "https://docs.nookure.com/",
     tl: "nav.docs",
     target: "__blank",
   },
