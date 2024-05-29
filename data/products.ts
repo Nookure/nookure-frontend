@@ -2,10 +2,10 @@ import type Product from "../interfaces/product";
 
 const products: Product[] = [
   {
-    name: "MAStaff",
+    name: "NookureStaff",
     url: "https://builtbybit.com/resources/25460/",
-    description: "resource.mastaff.description",
-    image: "/resources/mastaff.png",
+    description: "resource.nookurestaff.description",
+    image: "/resources/nookurestaff.png",
   },
   {
     name: "NookTheme",
