@@ -1,8 +1,8 @@
 export default {
   index: {
     meta: {
-      title: "Nookure - Home",
-      description: "Welcome to Nookure Studios Website, here you will find information about our projects and services.",
+      title: "Nookure • Inicio",
+      description: "Explore la diversa gama de proyectos y servicios de Nookure Studios presentados en nuestro sitio web.",
     },
     welcome: {
       header: "Bienvenido a",
@@ -11,52 +11,53 @@ export default {
     features: {
       scalability: {
         header: "Escalabilidad",
-        description: "Nuestras soluciones están diseñadas para crecer con sus necesidades, garantizando la compatibilidad a largo plazo."
+        description: "Nuestras soluciones están diseñadas para la escalabilidad, garantizando la compatibilidad a largo plazo con tus necesidades en evolución."
       },
       customization: {
         header: "Personalización",
-        description: "Ofrecemos una amplia gama de opciones de personalización para satisfacer sus necesidades."
+        description: "Elija entre una diversa gama de opciones de personalización diseñadas para satisfacer precisamente tus requisitos."
       },
       security: {
         header: "Seguridad",
-        description: "Priorizamos la seguridad por encima de todo y garantizamos soluciones rápidas para cualquier problema."
+        description: "La seguridad es nuestra máxima prioridad, y nos dedicamos a resolver rápidamente cualquier problema que pueda surgir."
       },
       quality: {
         header: "Calidad",
-        description: "Estamos comprometidos en proporcionar las mejores soluciones de calidad para nuestros clientes."
+        description: "Nos dedicamos a la excelencia, entregando constantemente soluciones de alta calidad para satisfacer tus necesidades."
       }
     },
   },
   products: {
     meta: {
-      title: "Nookure - Productos",
-      description: "Aquí encontrará información sobre nuestros productos.",
+      title: "Nookure • Productos",
+      description: "Descubre nuestros diversos productos destacados.",
     },
   },
   nav: {
     home: "Inicio",
     products: "Productos",
-    docs: "Docs",
+    docs: "Documentación",
   },
   footer: {
     resources: "Recursos",
-    followUs: "Siguenos",
+    followUs: "Síguenos",
     accounts: "Cuentas",
+    copyright: "Todos los derechos reservados.",
   },
   resource: {
-    header: `Algunos proyectos <span class="red-glow-gradient">increíbles</span>`,
+    header: `Aquí algunos proyectos <span class="red-glow-gradient">asombrosos</span>`,
     visitPage: "Visitar Página",
-    mastaff: {
-      description: "Plugin de Staff para Spigot, Bukkit, Paper, Bungee y Folia",
+    nookurestaff: {
+      description: "El plugin de utilidades de staff más avanzado hecho para servidores de Minecraft a gran escala.",
     },
     nooktheme: {
-      description: "Es un tema gratuito para pterodactyl simple y bonito listo para usar",
+      description: "Nuestro tema más popular para Pterodactyl, simple, hermoso y gratuito.",
     },
     ice: {
-      description: "Un tema de Ice basado en Minecraft para Pterodactyl Panel",
+      description: "Un tema del Pterodactyl inspirado en Minecraft con una paleta de colores azulada.",
     },
     purple: {
-      description: "Un tema de Purple basado en Minecraft para Pterodactyl Panel",
+      description: "Un tema del Pterodactyl inspirado en Minecraft con una paleta de colores púrpura.",
     },
   }
 }

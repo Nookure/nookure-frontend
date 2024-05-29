@@ -1,8 +1,8 @@
 export default {
   index: {
     meta: {
-      title: "Nookure - Home",
-      description: "Welcome to Nookure Studios Website, here you will find information about our projects and services.",
+      title: "Nookure • Home",
+      description: "Explore Nookure Studios' diverse range of projects and services showcased on our website.",
     },
     welcome: {
       header: "Welcome to",
@@ -11,26 +11,26 @@ export default {
     features: {
       scalability: {
         header: "Scalability",
-        description: "Our solutions are designed to grow with your needs, ensuring long-term compatibility."
+        description: "Our solutions are tailored for scalability, guaranteeing long-term compatibility with your evolving needs."
       },
       customization: {
         header: "Customization",
-        description: "We offer a wide range of customization options to meet your needs."
+        description: "Choose from a diverse array of customization options tailored to precisely meet your requirements."
       },
       security: {
         header: "Security",
-        description: "We prioritize safety above all else and ensure quick solutions to any issues."
+        description: "Safety is our top priority, and we are dedicated to promptly resolving any issues that may arise."
       },
       quality: {
         header: "Quality",
-        description: "We are committed to providing the best quality solutions for our customers."
+        description: "Dedicated to excellence, we consistently deliver top-quality solutions to meet our customers' needs."
       }
     },
   },
   products: {
     meta: {
-      title: "Nookure - Products",
-      description: "Here you will find information about our products.",
+      title: "Nookure • Products",
+      description: "Discover our diverse featured products.",
     },
   },
   nav: {
@@ -42,21 +42,22 @@ export default {
     resources: "Resources",
     followUs: "Follow us",
     accounts: "Accounts",
+    copyright: "All rights reserved.",
   },
   resource: {
     header: `Here some <span class="red-glow-gradient">amazing</span> projects`,
     visitPage: "Visit Page",
-    mastaff: {
-      description: "Staff Plugin for Spigot, Bukkit, Paper, Bungee and Folia",
+    nookurestaff: {
+      description: "The most advanced staff utils plugin made for large Minecraft servers.",
     },
     nooktheme: {
-      description: "Is a simple and beautiful pterodactyl free theme ready to use",
+      description: "Our most popular theme for Pterodactyl Panel, simple, beatiful and free.",
     },
     ice: {
-      description: "A Ice theme based on Minecraft for Pterodactyl Panel",
+      description: "A Pterodactyl Panel theme inspired on Minecraft with a bluish color palette.",
     },
     purple: {
-      description: "A Purple theme based on Minecraft for Pterodactyl Panel",
+      description: "A Pterodactyl Panel theme inspired on Minecraft with a purple color palette.",
     },
   }
 }
