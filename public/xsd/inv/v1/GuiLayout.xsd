@@ -7,15 +7,15 @@
 
   <xs:complexType name="guiLayout">
     <xs:sequence>
-      <xs:element name="Head" type="head" minOccurs="0"/>
-      <xs:element name="Items" type="items" minOccurs="0"/>
+      <xs:element name="Head" type="head"/>
+      <xs:element name="Items" type="items"/>
     </xs:sequence>
   </xs:complexType>
 
   <xs:complexType name="head">
     <xs:sequence>
-      <xs:element name="title" type="title" minOccurs="0"/>
-      <xs:element name="rows" type="xs:int"/>
+      <xs:element name="title" type="title" default="Your tittle"/>
+      <xs:element name="rows" type="xs:int" default="6"/>
       <xs:element name="permission" type="xs:string" minOccurs="0"/>
       <xs:element name="noPermissionMessage" type="xs:string" minOccurs="0"/>
     </xs:sequence>
@@ -24,7 +24,7 @@
   <xs:complexType name="title">
     <xs:simpleContent>
       <xs:extension base="xs:string">
-        <xs:attribute name="tl" type="xs:boolean" use="required"/>
+        <xs:attribute name="tl" type="xs:boolean"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -37,8 +37,7 @@
 
   <xs:complexType name="item">
     <xs:sequence>
-      <xs:element name="Name" type="xs:anyType" minOccurs="0"/>
-      <xs:element name="tl" type="xs:boolean"/>
+      <xs:element name="Name" type="xs:string"/>
       <xs:element ref="Lore" minOccurs="0"/>
       <xs:element name="LiteralLore" type="literalLore" minOccurs="0"/>
       <xs:element name="Actions" type="actions" minOccurs="0"/>
@@ -48,13 +47,13 @@
     <xs:attribute name="material" type="xs:string"/>
     <xs:attribute name="head" type="xs:string"/>
     <xs:attribute name="headType" type="headType"/>
-    <xs:attribute name="amount" type="xs:int" use="required"/>
-    <xs:attribute name="enchanted" type="xs:boolean" use="required"/>
+    <xs:attribute name="amount" type="xs:int" default="1"/>
+    <xs:attribute name="enchanted" type="xs:boolean"/>
   </xs:complexType>
 
   <xs:complexType name="lore">
     <xs:sequence>
-      <xs:element name="LoreLine" type="xs:anyType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="LoreLine" type="xs:anyType" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
@@ -64,7 +63,7 @@
 
   <xs:complexType name="actions">
     <xs:sequence>
-      <xs:element name="Action" type="action" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="Action" type="action" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 
