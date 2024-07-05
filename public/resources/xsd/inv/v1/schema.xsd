@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="GuiLayout" type="guiLayout"/>
+
+  <xs:element name="Lore" type="lore"/>
+
+  <xs:complexType name="guiLayout">
+    <xs:sequence>
+      <xs:element name="Head" type="head" minOccurs="0"/>
+      <xs:element name="Items" type="items" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="head">
+    <xs:sequence>
+      <xs:element name="title" type="title" minOccurs="0"/>
+      <xs:element name="rows" type="xs:int"/>
+      <xs:element name="permission" type="xs:string" minOccurs="0"/>
+      <xs:element name="noPermissionMessage" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="title">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="tl" type="xs:boolean" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="items">
+    <xs:sequence>
+      <xs:element name="Item" type="item" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="item">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:anyType" minOccurs="0"/>
+      <xs:element name="tl" type="xs:boolean"/>
+      <xs:element ref="Lore" minOccurs="0"/>
+      <xs:element name="LiteralLore" type="literalLore" minOccurs="0"/>
+      <xs:element name="Actions" type="actions" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string"/>
+    <xs:attribute name="slot" type="xs:int" use="required"/>
+    <xs:attribute name="material" type="xs:string"/>
+    <xs:attribute name="head" type="xs:string"/>
+    <xs:attribute name="headType" type="headType"/>
+    <xs:attribute name="amount" type="xs:int" use="required"/>
+    <xs:attribute name="enchanted" type="xs:boolean" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="lore">
+    <xs:sequence>
+      <xs:element name="LoreLine" type="xs:anyType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="literalLore">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <xs:complexType name="actions">
+    <xs:sequence>
+      <xs:element name="Action" type="action" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="action">
+    <xs:sequence/>
+    <xs:attribute name="type" type="xs:string"/>
+    <xs:attribute name="value" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:simpleType name="headType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="URL"/>
+      <xs:enumeration value="BASE64"/>
+      <xs:enumeration value="PLAYER"/>
+      <xs:enumeration value="PLAYER_UUID"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+
