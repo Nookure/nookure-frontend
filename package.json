@@ -10,12 +10,9 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxt/image": "1.0.0-rc.1",
-    "@nuxt/ui": "^2.8.1",
-    "@nuxtjs/i18n": "8.0.0-rc.5",
-    "@pinia/nuxt": "^0.4.11",
-    "nuxt": "^3.7.4",
-    "nuxt-twemoji": "^3.3.3",
-    "pinia": "^2.1.6"
+    "@nuxt/image": "1.8.0",
+    "@nuxt/ui": "^2.18.4",
+    "@nuxtjs/i18n": "8.5.1",
+    "nuxt": "^3.13.1"
   }
 }
