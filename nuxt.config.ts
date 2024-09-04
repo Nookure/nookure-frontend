@@ -20,6 +20,9 @@ export default defineNuxtConfig({
 
   nitro: {
     static: true,
+    prerender: {
+      routes: ["/_ipx/h_35/img/logo-white.png", "/_ipx/h_30/img/logo.png"],
+    },
   },
 
   compatibilityDate: "2024-09-04",
